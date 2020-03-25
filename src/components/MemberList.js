@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Box, List } from '@material-ui/core';
-import { theme, mock } from '~/config/*';
-import { Member, ListSubheader } from '~/components/*';
+import React from 'react'
+import styled from 'styled-components'
+import { Box, List } from '@material-ui/core'
+import { theme, mock } from '~/config/*'
+import { Member, ListSubheader } from '~/components/*'
 
 const StyledBox = styled(Box)`
   @media screen and (min-width: 240px) and (max-width: 320px) {
@@ -12,15 +12,15 @@ const StyledBox = styled(Box)`
     width: 320px;
   };
   background-color: ${theme.paperBg};
-`;
+`
 
 const items = []
 for (const [index, value] of mock.members.entries()) {
   items.push(<Member key={index} member={value}/>)
-};
+}
 
-export default (props) => {
-  const { showBackButton } = props;
+export const MemberList = (props) => {
+  const { showBackButton } = props
 
   return (
     <StyledBox boxShadow={1}>
@@ -32,5 +32,5 @@ export default (props) => {
         {items}
       </List>
     </StyledBox>
-  );
-};
+  )
+}

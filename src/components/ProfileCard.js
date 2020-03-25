@@ -1,7 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Card, CardContent, CardMedia, Typography }
-  from '@material-ui/core';
+import React from 'react'
+import styled from 'styled-components'
+import { Card, CardContent, CardMedia, Typography } from '@material-ui/core'
 
 const
   StyledCard = styled(Card)`
@@ -19,10 +18,10 @@ const
     @media screen and (max-width: 240px) {
       display: none !important;
     };
-  `;
+  `
 
-export default (props) => {
-  const member = props.data;
+export const ProfileCard = (props) => {
+  const member = props.data
 
   return (
     <StyledCard>
@@ -41,5 +40,5 @@ export default (props) => {
       </div>
       <Avatar size="120px" image={member.avatar} />
     </StyledCard>
-  );
-};
+  )
+}

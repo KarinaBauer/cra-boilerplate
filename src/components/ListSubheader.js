@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import { Icon, IconButton, ListSubheader as Subheader }
-  from '@material-ui/core';
+  from '@material-ui/core'
 
 const
   Wrapper = styled.div`
@@ -15,12 +15,12 @@ const
         <Icon>arrow_back</Icon>
       </IconButton>
     } else {
-      return '';
-    };
-  };
+      return ''
+    }
+  }
 
-export default (props) => {
-  const show = props.showBackButton;
+export const ListSubheader = (props) => {
+  const show = props.showBackButton
 
   return (
     <Wrapper>
@@ -29,5 +29,5 @@ export default (props) => {
         Company members
       </Subheader>
     </Wrapper>
-  );
-};
+  )
+}
