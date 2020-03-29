@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Card, CardContent, CardMedia, Typography } from '@material-ui/core'
 
@@ -41,6 +42,10 @@ const ProfileCard = (props) => {
       <Avatar size="120px" image={member.avatar} />
     </StyledCard>
   )
+}
+
+ProfileCard.propTypes = {
+  data: PropTypes.object,
 }
 
 export default ProfileCard
