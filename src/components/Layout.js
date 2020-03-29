@@ -1,17 +1,18 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { ThemeProvider } from '@material-ui/styles'
-import { muiTheme } from '~/config/*'
+import { muiTheme } from '~/config/theme'
 import { Grid } from '@material-ui/core'
 
 const Wrapper = styled(Grid)`
   height: 100vh;
   padding-top: 72px;
-  background-color: #0c0a20;
+  background-color: #101112;
   color: #ffffff;
 `
 
-export const Layout = (props) => {
+const Layout = (props) => {
   return (
     <ThemeProvider theme={muiTheme}>
       <Wrapper
@@ -25,3 +26,9 @@ export const Layout = (props) => {
     </ThemeProvider>
   )
 }
+
+Layout.propTypes = {
+  children: PropTypes.element,
+}
+
+export default Layout

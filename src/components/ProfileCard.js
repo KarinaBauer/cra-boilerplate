@@ -20,7 +20,7 @@ const
     };
   `
 
-export const ProfileCard = (props) => {
+const ProfileCard = (props) => {
   const member = props.data
 
   return (
@@ -42,3 +42,5 @@ export const ProfileCard = (props) => {
     </StyledCard>
   )
 }
+
+export default ProfileCard

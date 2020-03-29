@@ -2,17 +2,11 @@
   "import/resolver": "babel-plugin-root-import",
 
   "compilerOptions": {
-      "target": "esnext",
-      "module": "commonjs",
-      "allowSyntheticDefaultImports": true,
-      "baseUrl": "./src",
-      "paths": {
-        "@/*": ["./*"]
-      }
-  },
-  "exclude": [
-      "build",
-      "node_modules",
-      "public"
-  ]
+    "target": "es2020",
+    "module": "es2015",
+    "baseUrl": "./src",
+    "paths": {
+      "~/*": ["./*"]
+    }
+  }
 }

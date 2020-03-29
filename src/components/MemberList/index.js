@@ -1,8 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import { map } from 'ramda'
+import { theme } from '~/config/theme'
+import { mock } from '~/config/*'
 import { Box, List } from '@material-ui/core'
-import { theme, mock } from '~/config/*'
-import { Member, ListSubheader } from '~/components/*'
+import { Member, Subheader } from './*'
 
 const StyledBox = styled(Box)`
   @media screen and (min-width: 240px) and (max-width: 320px) {
@@ -14,23 +17,24 @@ const StyledBox = styled(Box)`
   background-color: ${theme.paperBg};
 `
 
-const items = []
-for (const [index, value] of mock.members.entries()) {
-  items.push(<Member key={index} member={value}/>)
+const renderEntry = entry => {
+  return (<Member key={entry.id} member={entry}/>)
 }
 
 export const MemberList = (props) => {
-  const { showBackButton } = props
+  const { returnButton } = props
 
   return (
     <StyledBox boxShadow={1}>
       <List subheader={
-        <ListSubheader
-          showBackButton={showBackButton}
-        />
+        <Subheader returnButton={returnButton}/>
       }>
-        {items}
+        { map(renderEntry, mock.members) }
       </List>
     </StyledBox>
   )
+}
+
+MemberList.propTypes = {
+  returnButton: PropTypes.bool,
 }

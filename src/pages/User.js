@@ -1,8 +1,10 @@
 import React from 'react'
-import { ProfileCard, MemberList } from '~/components/*'
+import PropTypes from 'prop-types'
+import { ProfileCard } from '~/components/*'
+import { MemberList } from '~/components/MemberList'
 import { mock } from '~/config/*'
 
-export const User = (props) => {
+const User = (props) => {
   const
     { params } = props.match,
     member = mock.members[params.id - 1]
@@ -10,7 +12,13 @@ export const User = (props) => {
   return (
     <div>
       <ProfileCard data={member} />
-      <MemberList showBackButton={true} />
+      <MemberList returnButton={true} />
     </div>
   )
 }
+
+User.propTypes = {
+  match: PropTypes.object,
+}
+
+export default User

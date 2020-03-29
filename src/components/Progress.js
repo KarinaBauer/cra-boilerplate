@@ -1,4 +1,5 @@
 import React from 'react'
 import { CircularProgress } from '@material-ui/core'
 
-export const Progress = () => <div><CircularProgress/></div>
+const Progress = () => <div><CircularProgress/></div>
+export default Progress

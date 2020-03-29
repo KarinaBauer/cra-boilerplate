@@ -1,4 +1,4 @@
-export default {
+const mock = {
   members: [
     {
       id: 1,
@@ -49,4 +49,6 @@ export default {
       address: "Vancouver, British Columbia, Canada"
     }
   ]
-};
+}
+
+export default mock

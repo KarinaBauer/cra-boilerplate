@@ -1,3 +1,3 @@
-# Karina Bauer's extended create-react-app boilerplate
+# Karina Bauer's react boilerplate
 
-Test exercise on React + GraphQL stack
+Extended create-react-app boilerplate for React + GraphQL stack
